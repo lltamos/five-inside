@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.alqsoft.dao.provider.IProviderMapper">
+	
+	
+	<!-- 获取厂商分页列表 -->
+	<select id="findProviderList" resultType="map" parameterType="map">
+		SELECT * FROM providert
+		WHERE 1=1
+		<if test="providerName !=null and providerName !='' ">
+			and name like concat('%',#{providerName},'%')
+		</if>
+		<if test="startTime !=null and startTime !='' ">
+			and created_time &gt;= #{startTime}
+		</if>
+		<if test="endTime !=null and endTime !='' ">
+			and created_time &lt;= #{endTime}
+		</if>
+		ORDER BY created_time DESC LIMIT #{startIndex},#{endIndex}
+	</select>
+	<!-- 获取厂商分页总条数 -->
+	<select id="getProviderCount" resultType="java.lang.Integer" parameterType="map">
+		SELECT count(*) FROM
+			providert
+		WHERE 1=1
+		<if test="providerName !=null and providerName !='' ">
+			and name like concat('%',#{providerName},'%')
+		</if>
+		<if test="startTime !=null and startTime !='' ">
+			and created_time &gt;= #{startTime}
+		</if>
+		<if test="endTime !=null and endTime !='' ">
+			and created_time &lt;= #{endTime}
+		</if>
+		ORDER BY created_time DESC
+	</select>
+	
+	
+	<!-- 获取添加关联分页列表 -->
+	<select id="findAssociatedPage" resultType="map" parameterType="map">
+		SELECT
+			*
+		FROM
+			goodt
+		WHERE
+			id NOT IN (
+				SELECT
+					goodid
+				FROM
+					relationshipt
+			)
+			AND
+			goodt.states != 3
+		<if test="goodName !=null and goodName !='' ">
+			and good_name like concat('%',#{goodName},'%')
+		</if>
+		<if test="barCode !=null and barCode !='' ">
+			and bar_code = #{barCode}
+		</if>
+		ORDER BY created_time DESC LIMIT #{startIndex},#{endIndex}
+	</select>
+	<!-- 获取添加关联分页总条数 -->
+	<select id="getAssociatedCount" resultType="java.lang.Integer" parameterType="map">
+		SELECT
+			COUNT(*)
+		FROM
+			goodt
+		WHERE
+			id NOT IN (
+				SELECT
+					goodid
+				FROM
+					relationshipt
+			)
+			AND
+			goodt.states != 3
+		<if test="goodName !=null and goodName !='' ">
+			and good_name like concat('%',#{goodName},'%')
+		</if>
+		<if test="barCode !=null and barCode !='' ">
+			and bar_code = #{barCode}
+		</if>
+		ORDER BY created_time DESC
+	</select>
+	
+	<!-- 取消关联分页列表 -->
+	<select id="findAssociatedCancelPage" resultType="map" parameterType="map">
+		SELECT
+			*
+		FROM
+			goodt
+		WHERE
+			id IN (
+				SELECT
+					goodid
+				FROM
+					relationshipt
+				WHERE
+					providerid = #{providerId}
+			)
+		<if test="goodName !=null and goodName !='' ">
+			and good_name like concat('%',#{goodName},'%')
+		</if>
+		<if test="barCode !=null and barCode !='' ">
+			and bar_code = #{barCode}
+		</if>
+		ORDER BY created_time DESC LIMIT #{startIndex},#{endIndex}
+	</select>
+	<!-- 取消关联分页总条数 -->
+	<select id="getAssociatedCancelCount" resultType="java.lang.Integer" parameterType="map">
+		SELECT
+			COUNT(*)
+		FROM
+			goodt
+		WHERE
+		id IN (
+			SELECT
+				goodid
+			FROM
+				relationshipt
+			WHERE
+				providerid = #{providerId}
+		)
+		<if test="goodName !=null and goodName !='' ">
+			and good_name like concat('%',#{goodName},'%')
+		</if>
+		<if test="barCode !=null and barCode !='' ">
+			and bar_code = #{barCode}
+		</if>
+		ORDER BY created_time DESC
+	</select>
+</mapper>

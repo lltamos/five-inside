@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="com.alqsoft.dao.fiancialstatement.FinancialStatementMapper">
+	<!-- <cache type="org.mybatis.caches.ehcache.EhcacheCache"> </cache> -->
+	<!-- 复杂类型可以映射也可以用as -->
+	<!-- <resultMap type="User" id="userMap"> </resultMap> -->
+
+	<!-- 有日志的 -->
+	<!-- <cache type="org.mybatis.caches.ehcache.LoggingEhcache"> </cache> -->
+
+	<select id="findFinancialStatements" resultType="java.util.Map"
+		parameterType="com.alqsoft.utils.ArgsBean">
+		<!-- SELECT ordergoodst.id, providert. NAME, goodt.good_name, SUM(ordergoodst.good_num) 
+			AS SalesNum, SUM(ordergoodst.good_num)*goodt.buy_price AS t, providert.account_num, 
+			providert.bank_name, providert.account_owner, providert.account_attribute, 
+			providert.account_type FROM ordergoodst LEFT JOIN goodt on goodt.id=ordergoodst.good_id 
+			LEFT JOIN relationshipt on ordergoodst.good_id = relationshipt.goodid LEFT 
+			JOIN providert on relationshipt.providerid = providert.id <where> <if test="filter.start 
+			!=null and filter.start != '' and filter.end !=null and filter.end != ''"> 
+			AND ordergoodst.created_time BETWEEN #{filter.start} AND #{filter.end} </if> 
+			<if test="filter.pname !=null and filter.pname != '' "> AND goodt.good_name 
+			LIKE '%${filter.pname}%' </if> </where> GROUP BY ordergoodst.good_id -->
+		SELECT
+		temp.id,
+		providert.id AS pid,
+		goodt.id AS gid,
+		providert.name,
+		goodt.good_name,
+		SUM(temp.good_num) AS salesNum,
+		SUM(temp.good_num) * goodt.buy_price AS t,
+		providert.account_num,
+		providert.bank_name,
+		providert.account_owner,
+		providert.account_attribute,
+		providert.account_type,
+		providert.account_area,
+		providert.account_city,
+		providert.branch_name,
+		providert.bank_num,
+		providert.mobile,
+		providert.organization
+		FROM
+		providert INNER JOIN
+		(select sum(ordergoodst.good_num)
+		good_num,ordergoodst.id
+		,relationshipt.providerid,ordergoodst.good_id
+		from ordergoodst LEFT
+		JOIN relationshipt on ordergoodst.good_id =
+		relationshipt.goodid
+		<where>
+			1=1
+			and
+			ordergoodst.minus_type = 0
+			<if
+				test="filter.start !=null and filter.start != '' and filter.end !=null and filter.end != ''">
+				<!-- 	AND ordergoodst.created_time BETWEEN
+				#{filter.start}
+				AND
+				#{filter.end} -->
+				
+				AND ordergoodst.created_time BETWEEN #{filter.start}
+				AND date_add(#{filter.end},INTERVAL 1 DAY)
+			</if>
+		</where>
+		GROUP BY ordergoodst.good_id) temp on temp.providerid=providert.id
+		LEFT
+		JOIN goodt on goodt.id=temp.good_id
+
+		<where>
+			<if test="filter.pname !=null and filter.pname != '' ">
+				AND goodt.good_name LIKE '%${filter.pname}%'
+			</if>
+		</where>
+		GROUP BY
+		temp.good_id
+		LIMIT #{offset},#{rows} LOCK IN SHARE MODE;
+	</select>
+
+	<select id="findFinancialStatementsCount" resultType="int"
+		parameterType="com.alqsoft.utils.ArgsBean">
+
+
+		SELECT COUNT(*) FROM(
+		SELECT
+		count(*)
+		FROM providert INNER JOIN
+		(select
+		ordergoodst.good_num,ordergoodst.id
+		,relationshipt.providerid,ordergoodst.good_id from ordergoodst LEFT
+		JOIN relationshipt on ordergoodst.good_id =
+		relationshipt.goodid
+		<where>
+			1=1
+			and
+			ordergoodst.minus_type = 0
+			<if test="filter.start !=null and filter.start != '' and filter.end !=null and filter.end != ''">
+				AND ordergoodst.created_time BETWEEN #{filter.start}
+				AND date_add(#{filter.end},INTERVAL 1 DAY)
+			</if>
+		</where>
+		GROUP BY ordergoodst.good_id) temp on temp.providerid=providert.id
+		LEFT JOIN goodt on goodt.id=temp.good_id
+
+		<where>
+			<if test="filter.pname !=null and filter.pname != '' ">
+				AND goodt.good_name LIKE '%${filter.pname}%'
+			</if>
+		</where>
+		GROUP BY
+		temp.good_id
+		) temps
+	</select>
+	<select id="findInventoryt" resultType="java.lang.Integer"
+		parameterType="java.util.HashMap">
+		SELECT i.num AS ileftNum
+		FROM inventoryt AS i
+		WHERE
+		i.goods_id=#{gid}
+	</select>
+	<select id="findOrdergoodstRemainNum" resultType="java.lang.Integer"
+		parameterType="java.util.HashMap">
+		SELECT SUM(o.remain_num) AS oleftNum
+		FROM ordergoodst AS
+		o
+		WHERE  
+			o.created_time BETWEEN date_add(#{end},INTERVAL 1 DAY) 
+			AND date_add(now(),INTERVAL 1 DAY) 
+			AND o.good_id=#{gid} 
+			AND o.minus_type=0
+	</select>
+</mapper>

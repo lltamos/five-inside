@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.alqsoft.dao.financialdetailreport.IfinancialDetailReportMapper">
+	<select id="findDetailReportList" resultType="java.util.HashMap" parameterType="java.util.HashMap">
+		SELECT * FROM  financialdetailreportt  where state=#{state} AND summary_id=#{summaryId}
+		ORDER BY created_time DESC 
+		LIMIT #{page},#{rows}
+	</select>
+	<select id="getDetailReportTotal" resultType="java.lang.Integer" parameterType="java.util.HashMap">
+		SELECT COUNT(*) FROM financialdetailreportt where state=#{state} AND summary_id=#{summaryId}
+	</select>
+	
+	<select id="findDetailListForEmail" resultType="java.util.HashMap" parameterType="java.util.HashMap">
+		SELECT * FROM  financialdetailreportt  where state=#{state} AND summary_id=#{summaryId}
+		GROUP BY provider_id
+	</select>
+	<select id="findDataForEmail" resultType="java.util.HashMap" parameterType="java.util.HashMap">
+		 SELECT p.name,p.id,g.good_name,f.good_num,ROUND(f.good_num*g.buy_price, 2) AS BuyPrice,f.left_num
+		 FROM 
+		 goodt g, 
+		 providert p,relationshipt r,financialdetailreportt f
+		 WHERE 
+		 g.id=f.goodid
+		 AND p.id=r.providerid
+		 AND r.goodid=g.id
+		 AND f.provider_id=p.id
+		 AND f.provider_id=#{providerId}
+		 AND f.summary_id=#{summaryId}
+		 AND f.state=0
+	</select>
+	<select id="findDataForSummaryExcal" resultType="java.util.HashMap" parameterType="java.lang.Long">
+	SELECT   
+	p.name,  
+	p.account_num,
+	p.bank_name,
+	p.account_owner,
+	ROUND(f.pay_money, 2) AS BuyPrice,
+	p.account_attribute,p.account_type AS '银行卡',
+	'北京' AS Province,
+	'北京' AS City,
+	p.bank_num,
+	'身份证' AS IDType,
+	'' AS IDCard,
+	'人民币' AS MoneyType,
+	'' AS Remark,
+	'' AS ProviderOrderNum,
+	'' AS ProviderNum
+	FROM providert p,
+	(SELECT provider_id,SUM(pay_money) pay_money FROM financialdetailreportt WHERE summary_id=#{id} AND state=0 GROUP BY provider_id) f    
+	WHERE p.id=f.provider_id  
+</select>
+
+
+<select id="findDatailBySummaryId" resultType="java.util.HashMap" parameterType="java.lang.Long">
+	SELECT DISTINCT  
+	p.name AS NAME,p.id AS providerId,p.email ,f.summary_id,f.detail_route AS detailRoute
+	FROM  
+	providert p,financialdetailreportt f  
+	WHERE  
+	p.id=f.provider_id AND f.summary_id=#{id} AND f.email_state!=1 
+</select>
+</mapper>

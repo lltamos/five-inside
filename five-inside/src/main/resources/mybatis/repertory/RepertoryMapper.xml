@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="com.alqsoft.dao.repertory.RepertoryDao">
+
+	<select id="findInventoryQuiry" resultType="java.util.Map"
+		parameterType="com.alqsoft.utils.ArgsBean">
+
+		SELECT
+		goodt.id,
+		goodt.good_name,
+		goodt.bar_code,
+		providert. NAME AS
+		address,
+		goodt.key_word,
+		inventoryt.num,
+		inventoryt.more_num
+		FROM
+		inventoryt,
+		goodt,
+		providert,
+		relationshipt
+		WHERE
+		inventoryt.goods_id =
+		goodt.id
+		AND
+		goods_id = relationshipt.goodid
+		AND
+		providert.id =
+		relationshipt.providerid
+
+		<if test="filter.pname !=null and filter.pname != '' ">
+			AND goodt.good_name LIKE '%${filter.pname}%'
+		</if>
+		<if test="filter.pcode !=null and filter.pcode != '' ">
+			AND goodt.bar_code = #{filter.pcode}
+		</if>
+		<if test="filter.pnum !=null and filter.pnum != '' ">
+			AND inventoryt.num = #{filter.pnum}
+		</if>
+		<if test="filter.pprovider !=null and filter.pprovider != '' ">
+			AND providert.NAME LIKE '%${filter.pprovider}%'
+		</if>
+		ORDER BY inventoryt.created_time DESC
+
+		LIMIT #{offset},#{rows};
+
+	</select>
+
+	<select id="findInventoryQuiryCount" resultType="int"
+		parameterType="com.alqsoft.utils.ArgsBean">
+
+		SELECT
+		count(*)
+		as count
+		FROM
+		inventoryt,
+		goodt,
+		providert,
+		relationshipt
+		WHERE
+		inventoryt.goods_id = goodt.id
+		AND
+		goods_id = relationshipt.goodid
+		AND
+		providert.id =
+		relationshipt.providerid
+
+		<if test="filter.pname !=null and filter.pname != '' ">
+			AND goodt.good_name LIKE '%${filter.pname}%'
+		</if>
+		<if test="filter.pcode !=null and filter.pcode != '' ">
+			AND goodt.bar_code = #{filter.pcode}
+		</if>
+		<if test="filter.pnum !=null and filter.pnum != '' ">
+			AND inventoryt.num = #{filter.pnum}
+		</if>
+		<if test="filter.pprovider !=null and filter.pprovider != '' ">
+			AND providert.NAME LIKE '%${filter.pprovider}%'
+		</if>
+
+
+
+	</select>
+
+
+	<select id="findInventoryRecords" resultType="java.util.Map"
+		parameterType="com.alqsoft.utils.ArgsBean">
+
+		SELECT
+		operation.id,
+		goodt.good_name,
+		goodt.bar_code,
+		operation.operation_type,
+		rolet.name,
+		operation.order_no,
+		operation.num,
+		operation.created_time,
+		current_inventory_num,
+		operation.shop_type
+		FROM
+		operationinventoryrecordt operation
+		LEFT JOIN inventoryt it ON
+		operation.inventory_id = it.id
+		LEFT JOIN goodt goodt ON it.goods_id =
+		goodt.id
+		LEFT JOIN rolet rolet ON operation.user_id = rolet.id
+		WHERE
+		(
+		operation.bar_code = goodt.bar_code
+		OR it.bar_code = goodt.bar_code
+		)
+
+		<if test="filter.pname !=null and filter.pname != '' ">
+			AND goodt.good_name LIKE '%${filter.pname}%'
+		</if>
+		<if test="filter.pcode !=null and filter.pcode != '' ">
+			AND goodt.bar_code = #{filter.pcode}
+		</if>
+		<if test="filter.ckeck !=null and filter.ckeck != '' ">
+			AND operation.operation_type = #{filter.ckeck}
+		</if>
+		ORDER BY operation.created_time DESC
+
+		LIMIT #{offset},#{rows};
+
+	</select>
+
+	<select id="findInventoryRecordsCount" resultType="int"
+		parameterType="com.alqsoft.utils.ArgsBean">
+
+		SELECT
+		count(*)
+		FROM
+		operationinventoryrecordt operation
+		LEFT JOIN
+		inventoryt it
+		ON
+		operation.inventory_id = it.id
+		LEFT JOIN goodt goodt ON
+		it.goods_id =
+		goodt.id
+		LEFT JOIN rolet rolet ON operation.user_id =
+		rolet.id
+		WHERE
+		(
+		operation.bar_code = goodt.bar_code
+		OR it.bar_code =
+		goodt.bar_code
+		)
+
+		<if test="filter.pname !=null and filter.pname != '' ">
+			AND goodt.good_name LIKE '%${filter.pname}%'
+		</if>
+		<if test="filter.pcode !=null and filter.pcode != '' ">
+			AND goodt.bar_code = #{filter.pcode}
+		</if>
+		<if test="filter.ckeck !=null and filter.ckeck != '' ">
+			AND operation.operation_type = #{filter.ckeck}
+		</if>
+
+	</select>
+
+	<select id="findStoreRecording" resultType="java.util.Map"
+		parameterType="com.alqsoft.utils.ArgsBean">
+
+		SELECT
+		st.*, pt. NAME
+		FROM
+		storageapply st,
+		providert pt,
+		relationshipt rt
+		WHERE
+		st.good_id =
+		rt.goodid
+		AND rt.providerid = pt.id
+
+		<if test="filter.start !=null and filter.start != '' and filter.end !=null and filter.end != ''">
+
+			AND st.created_time BETWEEN #{filter.start}
+			AND date_add(#{filter.end},INTERVAL 1 DAY)
+		</if>
+
+		ORDER BY st.created_time DESC
+
+		LIMIT #{offset},#{rows};
+	</select>
+	<select id="findStoreRecordingCount" resultType="int"
+		parameterType="com.alqsoft.utils.ArgsBean">
+
+		SELECT
+		count(*)
+		FROM
+		storageapply st,
+		providert pt,
+		relationshipt rt
+		WHERE
+		st.good_id =
+		rt.goodid
+		AND rt.providerid = pt.id
+		<if test="filter.start !=null and filter.start != '' and filter.end !=null and filter.end != ''">
+			<!-- AND st.created_time BETWEEN
+			#{filter.start}
+			AND #{filter.end} -->
+			
+			AND st.created_time BETWEEN #{filter.start}
+			AND date_add(#{filter.end},INTERVAL 1 DAY)
+		</if>
+
+	</select>
+
+</mapper>

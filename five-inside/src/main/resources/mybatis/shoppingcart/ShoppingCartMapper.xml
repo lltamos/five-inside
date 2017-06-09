@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="com.alqsoft.dao.shoppingcart.IShoppingCartMapper">
+
+
+<select id="getCartListByUserId" parameterType="java.util.HashMap" resultType="java.util.Map">
+	SELECT * FROM shoppingcartt  WHERE userid=#{userid} AND states =#{states} 
+	ORDER BY created_time DESC 
+</select>
+
+</mapper>

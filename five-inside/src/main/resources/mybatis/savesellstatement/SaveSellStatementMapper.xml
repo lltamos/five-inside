@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="com.alqsoft.dao.savesellstatement.SaveSellStatementDao">
+
+	<sql id="common">
+		(
+			SELECT
+				b.id,
+				b.good_name,
+				b.key_word,
+				b.buy_price*c.xl AS buyPrice,
+				c.xl,
+				d.rk,
+				g.pc,
+				f.py,
+				b.buy_price,
+				e.th
+			FROM
+				(
+					SELECT DISTINCT
+						(i.goods_id)
+					FROM
+						OperationInventoryRecordT o
+					LEFT JOIN InventoryT i ON i.ID = o.inventory_id
+						<where>
+							<if test="begin_time != null and begin_time != ''">
+								AND o.created_time &gt;= #{begin_time}
+							</if>
+							<if test="end_time != null and end_time != ''">
+								AND o.created_time &lt;= #{end_time}
+							</if>
+						</where>
+					UNION
+						SELECT
+							g.good_id
+						FROM
+							GoodsReturnRecordT g
+						<where>
+							<if test="begin_time != null and begin_time != ''">
+								AND g.created_time &gt;= #{begin_time}
+							</if>
+							<if test="end_time != null and end_time != ''">
+								AND g.created_time &lt;= #{end_time}
+							</if>
+						</where>
+						GROUP BY
+							g.good_id
+						UNION
+							SELECT DISTINCT
+								(i.goods_id)
+							FROM
+								StockTakeRecordT s
+							LEFT JOIN InventoryT i ON i.ID = s.inventory_id
+							<where>
+								<if test="begin_time != null and begin_time != ''">
+									AND s.created_time &gt;= #{begin_time}
+								</if>
+								<if test="end_time != null and end_time != ''">
+									AND s.created_time &lt;= #{end_time}
+								</if>
+							</where>
+				) a
+			LEFT JOIN GoodT b ON b.Id = a.goods_id
+			LEFT JOIN (
+				SELECT
+					i.goods_id,
+					SUM(o.Num) xl
+				FROM
+					OperationInventoryRecordT o
+				LEFT JOIN InventoryT i ON i.ID = o.inventory_id
+				<where>
+					<if test="begin_time != null and begin_time != ''">
+						AND o.created_time &gt;= #{begin_time}
+					</if>
+					<if test="end_time != null and end_time != ''">
+						AND o.created_time &lt;= #{end_time}
+					</if>
+				</where>
+				AND o.operation_type = 1
+				GROUP BY
+					i.goods_id
+			) c ON c.goods_id = a.goods_id
+			LEFT JOIN (
+				SELECT
+					i.goods_id,
+					SUM(o.Num) rk
+				FROM
+					OperationInventoryRecordT o
+				LEFT JOIN InventoryT i ON i.ID = o.inventory_id
+				<where>
+					<if test="begin_time != null and begin_time != ''">
+						AND o.created_time &gt;= #{begin_time}
+					</if>
+					<if test="end_time != null and end_time != ''">
+						AND o.created_time &lt;= #{end_time}
+					</if>
+				</where>
+				AND o.operation_type = 0
+				GROUP BY
+					i.goods_id
+			) d ON d.goods_id = a.goods_id
+			LEFT JOIN (
+				SELECT
+					g.good_id,
+					SUM(g.return_num) th
+				FROM
+					GoodsReturnRecordT g
+				<where>
+					<if test="begin_time != null and begin_time != ''">
+						AND g.created_time &gt;= #{begin_time}
+					</if>
+					<if test="end_time != null and end_time != ''">
+						AND g.created_time &lt;= #{end_time}
+					</if>
+				</where>
+				GROUP BY
+					g.good_id
+			) e ON e.good_id = a.goods_id
+			LEFT JOIN (
+				SELECT
+					i.goods_id,
+					abs(SUM(s.Num)) py
+				FROM
+					StockTakeRecordT s
+				LEFT JOIN InventoryT i ON i.ID = s.inventory_id
+				<where>
+					<if test="begin_time != null and begin_time != ''">
+						AND s.created_time &gt;= #{begin_time}
+					</if>
+					<if test="end_time != null and end_time != ''">
+						AND s.created_time &lt;= #{end_time}
+					</if>
+				</where>
+				AND s.Num &gt;= 0
+				GROUP BY
+					i.goods_id
+			) f ON f.goods_id = a.goods_id
+			LEFT JOIN (
+				SELECT
+					i.goods_id,
+					abs(SUM(s.Num)) pc
+				FROM
+					StockTakeRecordT s
+				LEFT JOIN InventoryT i ON i.ID = s.inventory_id
+				<where>
+					<if test="begin_time != null and begin_time != ''">
+						AND s.created_time &gt;= #{begin_time}
+					</if>
+					<if test="end_time != null and end_time != ''">
+						AND s.created_time &lt;= #{end_time}
+					</if>
+				</where>
+				AND s.Num &lt; 0
+				GROUP BY
+					i.goods_id
+			) g ON g.goods_id = a.goods_id 
+		) t
+	</sql>
+
+	<select id="findAll" resultType="java.util.HashMap"
+		parameterType="java.util.HashMap">
+		SELECT * FROM
+		<include refid="common" />
+		<where>
+			<if test="good_name != null and good_name != ''">
+				t.good_name LIKE concat('%',#{good_name},'%')
+
+			</if>
+		</where>
+		ORDER BY t.id
+		LIMIT
+		#{startIndex},#{endIndex}
+	</select>
+
+	<select id="getCount" resultType="int">
+		SELECT COUNT(1) FROM
+		<include refid="common" />
+		<where>
+			<if test="good_name != null and good_name != ''">
+				t.good_name LIKE concat('%',#{good_name},'%')
+			</if>
+		</where>
+		ORDER BY t.id
+	</select>
+
+	<select id="deriveCxStatement" resultType="java.util.HashMap"
+		parameterType="java.util.HashMap">
+		SELECT * FROM
+		<include refid="common" />
+		<where>
+			<if test="good_name != null and good_name != ''">
+				t.good_name LIKE concat('%',#{good_name},'%')
+			</if>
+		</where>
+		ORDER BY t.id
+	</select>
+	
+	<select id="deriveKcStatement" resultType="java.util.HashMap"
+		parameterType="java.util.HashMap">
+		SELECT
+			goodT.id,
+			goodT.good_name,
+			goodT.bar_code,
+			goodT.key_word,
+			inventoryT.num,
+			inventoryT.more_num,
+			p. NAME AS name
+		FROM
+			GoodT goodT
+		LEFT JOIN RelationShipT r ON goodT.Id = r.GoodID
+		LEFT JOIN providerT p ON r.providerID = p.ID,
+		 InventoryT inventoryT
+		WHERE
+			goodT.Id = inventoryT.goods_id
+		ORDER BY
+			p.NAME DESC
+	</select>
+</mapper>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="com.alqsoft.dao.shoporder.ShopOrderMapper">
+
+	<resultMap type="com.alqsoft.entity.ordergoods.OrderGoods" id="ordergoods">
+		<result property="id" column="id" />
+		<result property="GoodName" column="good_name" />
+		<result property="GoodMoney" column="good_money" />
+		<result property="GoodNum" column="good_num" />
+		<result property="GoodId" column="good_id" />
+		<result property="OrderNum" column="order_num" />
+		<result property="RemainNum" column="remain_num" />
+		<result property="ShopType" column="shop_type" />
+		<result property="MinusType" column="minus_type" />
+	</resultMap>
+
+	<sql id="xytcommon">
+		(
+			SELECT
+			st.order_num,
+			st.created_time,
+			st.total_money,
+			ut. NAME,
+			ut.Mobile,
+			st.States
+			FROM
+				ShopOrderT st
+			LEFT JOIN usert ut ON ut.id = st.userid
+			<where>
+				shop_type= 0
+				<if test="mobile != null and mobile != ''">
+					AND mobile=#{mobile}
+				</if>
+				OR 
+				shop_type IS NULL
+				<if test="mobile != null and mobile != ''">
+					AND mobile=#{mobile}
+				</if>
+			</where>
+		) t
+	</sql>
+	<select id="findAllBDOrder" resultType="java.util.HashMap"
+		parameterType="java.util.HashMap">
+		SELECT * FROM
+			ShopOrderT st
+		WHERE
+			shop_type= 1 
+		AND 
+			st.userid = #{userid}
+		ORDER BY 
+			st.created_time DESC
+		LIMIT
+			#{startIndex},#{endIndex}
+	</select>
+
+	<select id="getBDOrderCount" resultType="int" parameterType="java.util.HashMap">
+		SELECT COUNT(1) FROM
+		ShopOrderT st
+		WHERE
+			shop_type= 1 
+		AND 
+			st.userid = #{userid}
+	</select>
+	
+	<select id="findAllXYTOrder" resultType="java.util.HashMap"
+		parameterType="java.util.HashMap">
+		SELECT * FROM
+		<include refid="xytcommon" />
+		ORDER BY t.created_time DESC
+		LIMIT
+		#{startIndex},#{endIndex}
+	</select>
+
+	<select id="getXYTOrderCount" resultType="int" parameterType="java.util.HashMap">
+		SELECT COUNT(1) FROM
+		<include refid="xytcommon" />
+		ORDER BY t.created_time DESC
+	</select>
+	
+	<select id="checkDetails" parameterType="String" resultType="java.util.HashMap">
+		SELECT * FROM 
+			OrderGoodsT
+		WHERE 
+			order_num=#{order_num}
+	</select>
+
+</mapper>

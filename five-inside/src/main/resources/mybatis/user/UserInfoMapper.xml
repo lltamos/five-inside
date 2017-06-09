@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="com.alqsoft.dao.UserInfoDao">
+
+<!-- 根據訂單中心id查找訂單中心法人 -->
+<select id="getOrderCenterByNumberMap" parameterType="java.lang.Long" resultType="java.util.Map">
+	SELECT a.bianh,u.`name` from bd_orderrecondt as a LEFT JOIN usert as u on a.userid=u.id
+	WHERE a.states=1 and a.id=#{id}
+</select>
+
+</mapper>

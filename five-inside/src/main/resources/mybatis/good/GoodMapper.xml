@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.alqsoft.dao.good.IGoodMapper">
+	
+	<resultMap type="com.alqsoft.entity.good.Good" id="goodMap">
+		<result property="id" column="id" />
+		<result property="GoodName" column="good_name" />
+		<result property="GoodMoney" column="good_money" />
+		<result property="KeyWord" column="key_word" />
+		<result property="GoodImgUrl" column="good_img_url" />
+		<result property="Details" column="details" />
+		<result property="States" column="states" />
+		<result property="GoodCate" column="good_cate" />
+		<result property="BarCode" column="bar_code" />
+		<result property="TotalSaleNum" column="total_sale_num" />
+		<result property="BuyPrice" column="buy_price" />
+	</resultMap>
+	
+	
+	<!-- 获取条码分页列表 -->
+	<select id="findGoodList" resultType="map" parameterType="map">
+		SELECT
+			(
+				SELECT
+					itt.num
+				FROM
+					inventoryt itt
+				WHERE
+					g.id = itt.goods_id
+			) AS num,
+			(
+				SELECT
+					pt.name
+				FROM
+					providert pt,
+					relationshipt rtt
+				WHERE
+					pt.id = rtt.providerid
+				AND g.id = rtt.goodid
+				GROUP BY rtt.goodid
+			) AS providertName,
+			g.*
+		FROM
+			goodt g
+		WHERE 1=1
+		<if test="goodName !=null and goodName !='' ">
+			and good_name like concat('%',#{goodName},'%')
+		</if>
+		<if test="barCode !=null and barCode !='' ">
+			and bar_code = #{barCode}
+		</if>
+		<if test="ptype !=null and ptype !='' ">
+			and states !=3
+		</if>
+		ORDER BY created_time DESC LIMIT #{startIndex},#{endIndex}
+	</select>
+	<!-- 获取条码分页总条数 -->
+	<select id="getGoodCount" resultType="java.lang.Integer" parameterType="map">
+		SELECT
+			count(*)
+		FROM
+			goodt g
+		WHERE 1=1
+		<if test="goodName !=null and goodName !='' ">
+			and good_name like concat('%',#{goodName},'%')
+		</if>
+		<if test="barCode !=null and barCode !='' ">
+			and bar_code = #{barCode}
+		</if>
+		<if test="ptype !=null and ptype !='' ">
+			and states !=3
+		</if>
+		ORDER BY created_time DESC
+	</select>
+	
+	<select id="getGoodByBarCodeBe" resultMap="goodMap" parameterType="string">
+		SELECT
+			g.*
+		FROM
+			goodt g,inventoryt i
+		WHERE 
+			g.id=i.goods_id
+		AND
+			g.bar_code=#{bar_code}
+	</select>
+</mapper>

@@ -1,0 +1,45 @@
+
+.proving{
+    width: 1188px;
+    margin-left: 6px;
+    position: relative;
+    overflow: hidden;
+    background-color: #fff;
+    min-height: 730px
+}
+.proving ul{
+    width: 350px;
+    margin: 30px 84px;
+    float: left;
+}
+.proving ul li{
+    margin-bottom: 20px;
+}
+.proving>p{
+    margin: 14px 60px;
+    font-size: 20px;
+}
+.proving ul li span{
+    font-size: 16px;
+    display: inline-block;
+    width: 74px;
+    text-align: right;
+    margin-right: 10px;
+}
+.proving ul li input{
+    width: 230px;
+    height: 24px;
+    padding-left: 10px;
+}
+.btn_9{
+    text-align: right;
+    cursor: pointer;
+}
+.btn_9 button{
+    width: 244px;
+    margin-right: 24px;
+    height: 28px;
+    background-color: #428BCA;
+    border: 1px solid #428BCA;
+    color: #fff;
+}

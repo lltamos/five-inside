@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.alqsoft.dao.financialsummaryreport.IFinancialSummaryReportMapper">
+	<select id="findSummeryReportList" resultType="java.util.HashMap" parameterType="java.util.HashMap">
+		SELECT * FROM financialsummaryreportt 
+		<where>
+		<if test="cycle != null and cycle != ''">
+				cycle = #{cycle}
+				AND state !=#{state} 
+			</if>
+			<if test="cycle == null or cycle == ''">
+				AND state !=#{state} 
+			</if>
+		</where>
+		ORDER BY created_time DESC 
+		LIMIT #{page},#{rows};
+	</select>
+	
+	<select id="getSummeryReportTotal" resultType="java.lang.Integer" parameterType="java.util.HashMap">
+		SELECT COUNT(*) FROM financialsummaryreportt 
+		<where>
+			<if test="cycle != null and cycle != ''">
+				cycle = #{cycle}
+				AND state !=#{state} 
+			</if>
+			<if test="cycle == null or cycle == ''">
+				AND state !=#{state} 
+			</if>
+		</where>
+	</select>
+</mapper>

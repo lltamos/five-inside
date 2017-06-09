@@ -1,0 +1,248 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ font-size:12px; margin:0;font-family: Microsoft yaHei; background: #e6e4e4;}
+h1,h2,h3,h4,h5,h6{ margin:0; font-weight:normal; font-size:12px;}
+a{ color:#000; text-decoration:none;}
+ol,ul,li{ list-style:none; padding:0; margin:0;}
+p{ margin:0;}
+i,em{ font-style:normal;}
+b,strong{ font-weight:normal;}
+a img{ border:none;}
+img{ margin: 0; padding: 0;}
+
+.clearfix:after{ display:block; content:""; clear:both;}
+.clearfix{ zoom:1; }
+
+
+*{
+     margin:0;
+     padding:0;
+ }
+.nav{
+    overflow: hidden;
+    height: 80px;
+    background-color: #3E506A;
+}
+.logo{
+    width: 1200px;
+    margin: 8px auto;
+}
+.bg_title{
+    overflow: hidden;
+    height:60px;
+    background-color: #b63b4d;
+}
+.bg_title img{
+    margin-top:10px;
+}
+.bg_title a>span{
+    display: inline-block;
+}
+.bg_title11{
+    width: 1350px;
+    margin: 0 auto;
+}
+.touxiang{
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin:8px 6px 0 20px;
+    border: 1px solid #000;
+    background: url(../img/icon_111.png) no-repeat 0 0;
+}
+.down_111{
+    float: right;
+    width: 6px;
+    height: 6px;
+    margin-right: 22px;
+    margin-top: 15px;
+    background: url(../img/icon_111.png) no-repeat -26px -7px;
+}
+.deongaree{
+    height:16px;
+    background-color: #0B76C6;
+}
+.among{
+    width: 1334px;
+    margin: 6px auto 0;
+    background: #fff;
+}
+.entry_dl{
+    display: inline-block;
+    width:120px;
+    height:30px;
+    line-height: 30px;
+    float: right;
+    margin-top:18px;
+    margin-right:36px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #000;
+    opacity: 0.6;
+    border-radius: 15px;
+}
+.message_left{
+    width:140px;
+    padding-bottom: 2000px;
+    margin-bottom: -2000px;
+    float: left;
+    /* background: url(../img/zuoce.png) no-repeat center 600px;    */ 
+    background-color: #3E506A;
+}h1 {
+ 	color: #FFF;
+ 	font-size: 24px;
+ 	font-weight: 400;
+ 	text-align: center;
+ 	margin-top: 80px;
+ }
+
+h1 a {
+ 	color: #c12c42;
+ 	font-size: 16px;
+ }
+
+ .accordion {
+ 	background: #FFF;
+ }
+
+.accordion .link {
+	cursor: pointer;
+	display: block;
+	color: #4D4D4D;
+	font-size: 14px;
+	font-weight: 700;
+	border-bottom: 1px solid #CCC;
+	position: relative;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+    width: 140px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.accordion li:last-child .link {
+	border-bottom: 0;
+}
+
+.accordion li i {
+	position: absolute;
+	top: 0;
+	left: 12px;
+	font-size: 18px;
+	color: #595959;
+	-webkit-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+.accordion li i.fa-chevron-down {
+	right: 12px;
+	left: auto;
+	font-size: 16px;
+}
+
+.accordion li.open .link {
+	color: #b63b4d;
+}
+
+.accordion li.open i {
+	color: #b63b4d;
+}
+.accordion li.open i.fa-chevron-down {
+	-webkit-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+/**
+ * Submenu
+ -----------------------------*/
+ .submenu {
+ 	display: none;
+ 	background: #444359;
+ 	font-size: 14px;
+ }
+
+ .submenu li {
+ 	border-bottom: 1px solid #4b4a5e;
+ }
+
+ .submenu a {
+ 	display: block;
+ 	text-decoration: none;
+ 	color: #d9d9d9;
+ 	padding: 12px;
+ 	padding-left: 42px;
+ 	-webkit-transition: all 0.25s ease;
+ 	-o-transition: all 0.25s ease;
+ 	transition: all 0.25s ease;
+ }
+
+ .submenu a:hover {
+ 	background: #b63b4d;
+ 	color: #FFF;
+ }
+
+
+
+
+
+
+
+
+.bg_shen{
+    background-color: #20272D;
+}
+.message_right{
+    float: left;
+    width: 1194px;
+    min-height:730px;
+    background-color: #e6e4e4;
+}
+
+.daili_1{
+    display: none;
+}
+
+
+
+
+/* 分页 */
+.paging{
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+.paging>ul{
+	display: inline-block;
+}
+.paging ul li{
+    float: left;
+    text-align: center;
+    margin-right: 14px;
+}
+.paging ul li a{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 6px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 6px #E3E2E2;
+}
+.btn_col22{
+    background-color: #F9F9F9;
+}
+.btn_col33{
+    background-color: #F9D148;
+}
+
+
+.form_1 ul li span{
+    min-height:20px;
+}

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="com.alqsoft.dao.salesreturn.SalesReturnMapper">
+
+	<select id="findAllGoodsReturn" resultType="java.util.HashMap"
+		parameterType="java.util.HashMap">
+		SELECT
+			orderGoods.*, goods.bar_code,shopOrder.userid
+		FROM
+			OrderGoodsT orderGoods,
+			ShopOrderT shopOrder,
+			GoodT goods
+		WHERE
+			goods.ID = orderGoods.good_id
+		AND orderGoods.order_num= shopOrder.order_num
+		AND shopOrder.States IN( 1 , 2 , 3)
+		<if test="order_num != null and order_num != ''">
+			AND orderGoods.order_num=#{order_num}
+		</if>
+		LIMIT
+		#{startIndex},#{endIndex}
+	</select>
+
+	<select id="getGoodsReturnCount" resultType="int" parameterType="java.util.HashMap">
+		SELECT
+			COUNT(1)
+		FROM
+			OrderGoodsT orderGoods,
+			ShopOrderT shopOrder,
+			GoodT goods
+		WHERE
+			goods.ID = orderGoods.good_id
+		AND orderGoods.order_num= shopOrder.order_num
+		AND shopOrder.States IN( '1' , '2' , '3')
+		<if test="order_num != null and order_num != ''">
+			AND orderGoods.order_num=#{order_num}
+		</if>
+	</select>
+
+	<select id="findAllReturnRecord" resultType="java.util.HashMap"
+		parameterType="java.util.HashMap">
+		SELECT
+			*
+		FROM
+			GoodsReturnRecordT T
+		<where>
+		<if test="good_name != null and good_name != ''">
+			AND T.good_name LIKE concat('%',#{good_name},'%')
+		</if>
+		<if test="order_no != null and order_no != ''">
+			AND T.order_no=#{order_no}
+		</if>
+		</where>
+		ORDER BY t.created_time DESC
+		LIMIT
+		#{startIndex},#{endIndex}
+	</select>
+	
+	<select id="getReturnRecordCount" resultType="int" parameterType="java.util.HashMap">
+		SELECT
+			COUNT(1)
+		FROM
+			GoodsReturnRecordT T
+		<where>
+		<if test="good_name != null and good_name != ''">
+			AND T.good_name LIKE concat('%',#{good_name},'%')
+		</if>
+		<if test="order_no != null and order_no != ''">
+			AND T.order_no=#{order_no}
+		</if>
+		</where>
+		ORDER BY t.created_time DESC
+	</select>
+</mapper>

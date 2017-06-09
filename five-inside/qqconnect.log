@@ -1,0 +1,683 @@
+1711 INFO  [2017-03-31 00:40:33]  HHH000108: Foreign keys: []
+1711 INFO  [2017-03-31 00:40:33]  HHH000126: Indexes: [index_logout_time, index_state, index_login_time, index_userid, index_sessionid, primary]
+1718 INFO  [2017-03-31 00:40:33]  HHH000261: Table found: bdbd.bd_orderdatat
+1718 INFO  [2017-03-31 00:40:33]  HHH000037: Columns: [created_time, orderno, num, order_centerid, pay_money, userid, states, update_time, bd_tjr, projact_type, tjr_gread, pay_type, id, create_user, created_ip, order_type]
+1718 INFO  [2017-03-31 00:40:33]  HHH000108: Foreign keys: []
+1718 INFO  [2017-03-31 00:40:33]  HHH000126: Indexes: [primary]
+1723 INFO  [2017-03-31 00:40:33]  HHH000261: Table found: bdbd.bd_orderrecondt
+1723 INFO  [2017-03-31 00:40:33]  HHH000037: Columns: [created_time, bianh, pid, cityid, userid, states, update_time, areaid, eval, big_areaid, tj_userid, grade, proid, id, create_user, created_ip]
+1723 INFO  [2017-03-31 00:40:33]  HHH000108: Foreign keys: []
+1723 INFO  [2017-03-31 00:40:33]  HHH000126: Indexes: [primary]
+1728 INFO  [2017-03-31 00:40:33]  HHH000261: Table found: bdbd.bd_ordert
+1728 INFO  [2017-03-31 00:40:33]  HHH000037: Columns: [order_no, created_time, df_money, flag, num, order_centerid, pay_money, userid, states, update_time, tj_states, projact_type, tjr_gread, pay_type, id, create_user, created_ip, order_type]
+1728 INFO  [2017-03-31 00:40:33]  HHH000108: Foreign keys: []
+1728 INFO  [2017-03-31 00:40:33]  HHH000126: Indexes: [primary]
+1732 INFO  [2017-03-31 00:40:33]  HHH000261: Table found: bdbd.card_manage_recond
+1732 INFO  [2017-03-31 00:40:33]  HHH000037: Columns: [created_time, mobile, userid, card_num, update_time, idcard, bank_name, name, bank_open, id, create_user, state, created_ip]
+1732 INFO  [2017-03-31 00:40:33]  HHH000108: Foreign keys: []
+1732 INFO  [2017-03-31 00:40:33]  HHH000126: Indexes: [primary]
+1737 INFO  [2017-03-31 00:40:33]  HHH000261: Table found: bdbd.card_manager
+1738 INFO  [2017-03-31 00:40:33]  HHH000037: Columns: [created_time, city, id_card, mobile, userid, card_num, update_time, province, bank_name, name, bank_open, id, create_user, created_ip]
+1738 INFO  [2017-03-31 00:40:33]  HHH000108: Foreign keys: []
+1738 INFO  [2017-03-31 00:40:33]  HHH000126: Indexes: [primary]
+1743 INFO  [2017-03-31 00:40:33]  HHH000261: Table found: bdbd.cash_receive_station
+1743 INFO  [2017-03-31 00:40:33]  HHH000037: Columns: [bank_prv, bank_sub, from_system, audit_status, audit_time, ora_name, ora_status, update_time, versionid, card_no, current_describe, mer_date, bank_name, css_type, current_balance, tel, id, approve_date, after_balance, created_time, describer, comments, bank_abbr, create_time, third_pay_type, ip, sign_date, person_name, chk_value, css_id, fee_income, person_no, money, name, system_role, create_user, mer_seq_id, created_ip, bank_city, status]
+1743 INFO  [2017-03-31 00:40:33]  HHH000108: Foreign keys: []
+1743 INFO  [2017-03-31 00:40:33]  HHH000126: Indexes: [primary]
+1747 INFO  [2017-03-31 00:40:33]  HHH000261: Table found: bdbd.err_money_infot
+1747 INFO  [2017-03-31 00:40:33]  HHH000037: Columns: [created_time, before_change_money, update_time, after_change_money, orderno, change_money, err_info, cate_id, id, create_user, created_ip, userid]
+1747 INFO  [2017-03-31 00:40:33]  HHH000108: Foreign keys: []
+1748 INFO  [2017-03-31 00:40:33]  HHH000126: Indexes: [primary]
+1752 INFO  [2017-03-31 00:40:33]  HHH000261: Table found: bdbd.fmoneyrecondt
+1752 INFO  [2017-03-31 00:40:33]  HHH000037: Columns: [created_time, update_time, zmoney, orderid, md_money, num, id, create_user, created_ip, userid]
+1752 INFO  [2017-03-31 00:40:33]  HHH000108: Foreign keys: []
+1752 INFO  [2017-03-31 00:40:33]  HHH000126: Indexes: [created_time, userior, ordid, userid, primary]
+1758 INFO  [2017-03-31 00:40:33]  HHH000261: Table found: bdbd.forderrecondt
+1758 INFO  [2017-03-31 00:40:33]  HHH000037: Columns: [fnum, created_time, update_time, yf_money, orderid, num, id, create_user, created_ip, userid]
+1758 INFO  [2017-03-31 00:40:33]  HHH000108: Foreign keys: []
+1758 INFO  [2017-03-31 00:40:33]  HHH000126: Indexes: [primary]
+1763 INFO  [2017-03-31 00:40:33]  HHH000261: Table found: bdbd.logging_event
+1763 INFO  [2017-03-31 00:40:33]  HHH000037: Columns: [formatted_message, caller_line, level_string, timestmp, arg3, caller_class, arg2, event_id, arg1, thread_name, arg0, caller_method, reference_flag, logger_name, caller_filename]
+1763 INFO  [2017-03-31 00:40:33]  HHH000108: Foreign keys: []
+1763 INFO  [2017-03-31 00:40:33]  HHH000126: Indexes: [primary]
+1769 INFO  [2017-03-31 00:40:33]  HHH000261: Table found: bdbd.logging_event_exception
+1769 INFO  [2017-03-31 00:40:33]  HHH000037: Columns: [event_id, i, trace_line]
+1769 INFO  [2017-03-31 00:40:33]  HHH000108: Foreign keys: [fk_hjmlc3lmhedtk9jw71kssif9o]
+1770 INFO  [2017-03-31 00:40:33]  HHH000126: Indexes: [primary]
+1775 INFO  [2017-03-31 00:40:33]  HHH000261: Table found: bdbd.logging_event_property
+1775 INFO  [2017-03-31 00:40:33]  HHH000037: Columns: [event_id, mapped_value, mapped_key]
+1775 INFO  [2017-03-31 00:40:33]  HHH000108: Foreign keys: [fk_t41emp5ddc9lx9x6ir2gaj5rs]
+1775 INFO  [2017-03-31 00:40:33]  HHH000126: Indexes: [primary]
+1780 INFO  [2017-03-31 00:40:33]  HHH000261: Table found: bdbd.manageorderfrt
+1780 INFO  [2017-03-31 00:40:33]  HHH000037: Columns: [created_time, bianh, fr_money, zy_fr_money, update_time, user_id, is_sure, dy_fr_money, id, create_user, order_num, time, total_money, created_ip]
+1781 INFO  [2017-03-31 00:40:33]  HHH000108: Foreign keys: []
+1781 INFO  [2017-03-31 00:40:33]  HHH000126: Indexes: [primary]
+1788 INFO  [2017-03-31 00:40:33]  HHH000261: Table found: bdbd.recharget
+1788 INFO  [2017-03-31 00:40:33]  HHH000037: Columns: [created_time, pay_bank_name, remark, type, is_order_center, update_time, money, user_key_id, id, create_user, state, created_ip, pay_bank_no]
+1788 INFO  [2017-03-31 00:40:33]  HHH000108: Foreign keys: []
+1788 INFO  [2017-03-31 00:40:33]  HHH000126: Indexes: [user_key_id, primary]
+1793 INFO  [2017-03-31 00:40:33]  HHH000261: Table found: bdbd.secondordermanaget
+1793 INFO  [2017-03-31 00:40:33]  HHH000037: Columns: [created_time, update_time, zmoney, ymoney, pid, id, create_user, time, created_ip, tid]
+1793 INFO  [2017-03-31 00:40:33]  HHH000108: Foreign keys: []
+1793 INFO  [2017-03-31 00:40:33]  HHH000126: Indexes: [primary]
+1798 INFO  [2017-03-31 00:40:33]  HHH000261: Table found: bdbd.takeoutt
+1798 INFO  [2017-03-31 00:40:33]  HHH000037: Columns: [sxf, created_time, chk_time, city, del_time, num, kqorder_id, bank_no, update_time, bank, money, province, name, user_key_id, bank_open, real_tx_money, id, create_user, state, auto_state, created_ip]
+1798 INFO  [2017-03-31 00:40:33]  HHH000108: Foreign keys: []
+1798 INFO  [2017-03-31 00:40:33]  HHH000126: Indexes: [created_time, user_key_id, createtime_userkeyid_state, primary]
+1803 INFO  [2017-03-31 00:40:33]  HHH000261: Table found: bdbd.untake
+1803 INFO  [2017-03-31 00:40:33]  HHH000037: Columns: [sxf, created_time, take_out_id, num, mobile, remark, bank_no, update_time, bank, money, name, user_key_id, bank_open, real_tx_money, id, create_user, state, auto_state, created_ip]
+1803 INFO  [2017-03-31 00:40:33]  HHH000108: Foreign keys: []
+1803 INFO  [2017-03-31 00:40:33]  HHH000126: Indexes: [primary]
+1809 INFO  [2017-03-31 00:40:33]  HHH000261: Table found: bdbd.userpayrecondt
+1810 INFO  [2017-03-31 00:40:33]  HHH000037: Columns: [order_no, created_time, update_time, account_type, money, cateid, id, create_user, created_ip, userid]
+1810 INFO  [2017-03-31 00:40:33]  HHH000108: Foreign keys: []
+1810 INFO  [2017-03-31 00:40:33]  HHH000126: Indexes: [created_time, cateid_userid, accounttype_cateid, cateid, userid, primary, cateid_account_type]
+1814 INFO  [2017-03-31 00:40:33]  HHH000261: Table found: bdbd.usert
+1815 INFO  [2017-03-31 00:40:33]  HHH000037: Columns: [created_time, order_center_account, fanx_account, mobile, stock_account, update_time, balance, good_balance, bank_id, idcard, grade, bank_name, name, bank_open, id, create_user, pwd, update_bank_card_count, created_ip, bdtjr_id]
+1815 INFO  [2017-03-31 00:40:33]  HHH000108: Foreign keys: []
+1815 INFO  [2017-03-31 00:40:33]  HHH000126: Indexes: [mobile, primary]
+1815 INFO  [2017-03-31 00:40:33]  HHH000232: Schema update complete
+0    INFO  [2017-03-31 00:42:24]  HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+81   INFO  [2017-03-31 00:42:24]  HHH000412: Hibernate Core {4.3.9.Final}
+84   INFO  [2017-03-31 00:42:24]  HHH000206: hibernate.properties not found
+85   INFO  [2017-03-31 00:42:24]  HHH000021: Bytecode provider name : javassist
+324  INFO  [2017-03-31 00:42:24]  HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+430  INFO  [2017-03-31 00:42:24]  HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+685  WARN  [2017-03-31 00:42:24]  HHH000038: Composite-id class does not override equals(): com.alqsoft.entity.logback.LoggingEventException
+685  WARN  [2017-03-31 00:42:24]  HHH000039: Composite-id class does not override hashCode(): com.alqsoft.entity.logback.LoggingEventException
+686  WARN  [2017-03-31 00:42:24]  HHH000038: Composite-id class does not override equals(): com.alqsoft.entity.logback.LoggingEventProperty
+686  WARN  [2017-03-31 00:42:24]  HHH000039: Composite-id class does not override hashCode(): com.alqsoft.entity.logback.LoggingEventProperty
+701  INFO  [2017-03-31 00:42:24]  HHH000397: Using ASTQueryTranslatorFactory
+1092 INFO  [2017-03-31 00:42:25]  HV000001: Hibernate Validator 5.1.3.Final
+1522 WARN  [2017-03-31 00:42:25]  HHH020003: Could not find a specific ehcache configuration for cache named [com.alqsoft.entity.push.PushLog]; using defaults.
+1913 INFO  [2017-03-31 00:42:26]  HHH000228: Running hbm2ddl schema update
+1913 INFO  [2017-03-31 00:42:26]  HHH000102: Fetching database metadata
+1915 INFO  [2017-03-31 00:42:26]  HHH000396: Updating schema
+1935 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.alq_area
+1935 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [created_time, update_time, parent_id, letter, num, name, id, create_user, area_id, created_ip]
+1935 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+1935 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [index_parent_id, index_name, primary]
+1941 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.alq_attachment
+1941 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [created_time, update_time, address, name, id, create_user, created_ip]
+1941 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+1941 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [primary]
+1947 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.alq_constant_type
+1947 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [created_time, update_time, type_name, id, create_user, created_ip, type_description]
+1948 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+1948 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [index_type_name, primary]
+1956 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.alq_icon
+1956 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [created_time, update_time, name, typeicon, id, create_user, urlicon, created_ip]
+1956 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+1956 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [index_name, primary, index_type]
+1964 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.alq_login_false_log
+1964 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [created_time, update_time, password, month, year, user_name, count, session_id, id, create_user, created_ip, day]
+1964 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+1964 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [index_year, index_password, index_month, index_day, index_user_name, primary]
+1972 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.alq_one_menu
+1972 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [created_time, image_name, update_time, name, attachment_id, id, create_user, created_ip, is_show]
+1972 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: [fk_lpcmh2vw3jgl8g2pjugh00mv8]
+1973 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [fk_lpcmh2vw3jgl8g2pjugh00mv8, primary]
+1980 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.alq_push
+1980 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [created_time, describer, year, message_type, sender_name, title, type, content, sender_id, receive_id, push_type, update_time, month, sender_head, receive_name, push_key, id, create_user, state, created_ip, day]
+1980 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+1980 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [primary]
+1986 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.alq_push_log
+1986 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [created_time, describer, year, message_type, sender_name, title, content, sender_id, receive_id, is_read, push_type, update_time, month, sender_head, stepwatch, receive_name, push_key, id, create_user, state, created_ip, day]
+1986 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+1987 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [primary]
+1995 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.alq_resource
+1996 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [created_time, resource_url, icon_id, is_menu, resource_level, one_menu_id, resource_order, update_time, resource_real_name, resource_id, id, create_user, resource_name, created_ip]
+1996 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: [fk_6a4av134ts9uklbqfhgk5ngie, fk_f4udafympwpe13k45fntyp8pl]
+1996 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [index_resource_level, fk_6a4av134ts9uklbqfhgk5ngie, index_resource_real_name, index_is_menu, fk_f4udafympwpe13k45fntyp8pl, index_resource_url, primary, index_resource_name]
+2001 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.alq_role
+2001 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [created_time, update_time, name, id, create_user, descript, created_ip]
+2001 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+2001 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [index_name, primary, index_descript]
+2005 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.alq_role_resource
+2005 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [role_id, resource_id]
+2006 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: [fk_stc0k55ngifoa2eassidd8tfd, fk_5vhomd64hu3qni17wi8kvoxps]
+2006 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [fk_stc0k55ngifoa2eassidd8tfd, fk_5vhomd64hu3qni17wi8kvoxps]
+2011 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.alq_sensitivity
+2011 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [created_time, update_time, name, id, create_user, created_ip]
+2011 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+2011 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [index_name, primary]
+2021 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.alq_update
+2021 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [created_time, update_time, is_must_to_update, attachment_id, id, create_user, title, type, created_ip, version]
+2021 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: [fk_85hejqsx1jadbf74tdev67swj]
+2021 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [index_title, primary, fk_85hejqsx1jadbf74tdev67swj]
+2027 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.alq_user_log
+2027 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [created_time, session_id, login_ip, role_name, update_time, login_name, user_id, login_time, browser, logout_time, id, create_user, state, created_ip]
+2027 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+2027 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [index_logout_time, index_state, index_login_time, index_userid, index_sessionid, primary]
+2032 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.bd_orderdatat
+2032 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [created_time, orderno, num, order_centerid, pay_money, userid, states, update_time, bd_tjr, projact_type, tjr_gread, pay_type, id, create_user, created_ip, order_type]
+2032 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+2032 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [primary]
+2037 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.bd_orderrecondt
+2037 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [created_time, bianh, pid, cityid, userid, states, update_time, areaid, eval, big_areaid, tj_userid, grade, proid, id, create_user, created_ip]
+2037 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+2037 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [primary]
+2042 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.bd_ordert
+2042 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [order_no, created_time, df_money, flag, num, order_centerid, pay_money, userid, states, update_time, tj_states, projact_type, tjr_gread, pay_type, id, create_user, created_ip, order_type]
+2042 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+2042 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [primary]
+2047 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.card_manage_recond
+2047 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [created_time, mobile, userid, card_num, update_time, idcard, bank_name, name, bank_open, id, create_user, state, created_ip]
+2047 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+2047 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [primary]
+2052 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.card_manager
+2052 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [created_time, city, id_card, mobile, userid, card_num, update_time, province, bank_name, name, bank_open, id, create_user, created_ip]
+2052 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+2052 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [primary]
+2059 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.cash_receive_station
+2059 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [bank_prv, bank_sub, from_system, audit_status, audit_time, ora_name, ora_status, update_time, versionid, card_no, current_describe, mer_date, bank_name, css_type, current_balance, tel, id, approve_date, after_balance, created_time, describer, comments, bank_abbr, create_time, third_pay_type, ip, sign_date, person_name, chk_value, css_id, fee_income, person_no, money, name, system_role, create_user, mer_seq_id, created_ip, bank_city, status]
+2059 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+2059 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [primary]
+2064 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.err_money_infot
+2064 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [created_time, before_change_money, update_time, after_change_money, orderno, change_money, err_info, cate_id, id, create_user, created_ip, userid]
+2064 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+2064 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [primary]
+2068 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.fmoneyrecondt
+2068 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [created_time, update_time, zmoney, orderid, md_money, num, id, create_user, created_ip, userid]
+2068 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+2068 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [created_time, userior, ordid, userid, primary]
+2073 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.forderrecondt
+2073 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [fnum, created_time, update_time, yf_money, orderid, num, id, create_user, created_ip, userid]
+2073 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+2073 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [primary]
+2078 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.logging_event
+2078 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [formatted_message, caller_line, level_string, timestmp, arg3, caller_class, arg2, event_id, arg1, thread_name, arg0, caller_method, reference_flag, logger_name, caller_filename]
+2078 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+2078 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [primary]
+2082 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.logging_event_exception
+2082 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [event_id, i, trace_line]
+2082 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: [fk_hjmlc3lmhedtk9jw71kssif9o]
+2082 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [primary]
+2087 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.logging_event_property
+2087 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [event_id, mapped_value, mapped_key]
+2087 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: [fk_t41emp5ddc9lx9x6ir2gaj5rs]
+2087 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [primary]
+2091 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.manageorderfrt
+2091 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [created_time, bianh, fr_money, zy_fr_money, update_time, user_id, is_sure, dy_fr_money, id, create_user, order_num, time, total_money, created_ip]
+2091 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+2091 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [primary]
+2095 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.recharget
+2095 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [created_time, pay_bank_name, remark, type, is_order_center, update_time, money, user_key_id, id, create_user, state, created_ip, pay_bank_no]
+2095 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+2095 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [user_key_id, primary]
+2099 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.secondordermanaget
+2099 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [created_time, update_time, zmoney, ymoney, pid, id, create_user, time, created_ip, tid]
+2099 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+2099 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [primary]
+2104 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.takeoutt
+2105 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [sxf, created_time, chk_time, city, del_time, num, kqorder_id, bank_no, update_time, bank, money, province, name, user_key_id, bank_open, real_tx_money, id, create_user, state, auto_state, created_ip]
+2105 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+2105 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [created_time, user_key_id, createtime_userkeyid_state, primary]
+2109 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.untake
+2109 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [sxf, created_time, take_out_id, num, mobile, remark, bank_no, update_time, bank, money, name, user_key_id, bank_open, real_tx_money, id, create_user, state, auto_state, created_ip]
+2109 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+2109 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [primary]
+2114 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.userpayrecondt
+2114 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [order_no, created_time, update_time, account_type, money, cateid, id, create_user, created_ip, userid]
+2115 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+2115 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [created_time, cateid_userid, accounttype_cateid, cateid, userid, primary, cateid_account_type]
+2118 INFO  [2017-03-31 00:42:26]  HHH000261: Table found: bdbd.usert
+2119 INFO  [2017-03-31 00:42:26]  HHH000037: Columns: [created_time, order_center_account, fanx_account, mobile, stock_account, update_time, balance, good_balance, bank_id, idcard, grade, bank_name, name, bank_open, id, create_user, pwd, update_bank_card_count, created_ip, bdtjr_id]
+2119 INFO  [2017-03-31 00:42:26]  HHH000108: Foreign keys: []
+2119 INFO  [2017-03-31 00:42:26]  HHH000126: Indexes: [mobile, primary]
+2119 INFO  [2017-03-31 00:42:26]  HHH000232: Schema update complete
+0    INFO  [2017-03-31 00:45:01]  HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+67   INFO  [2017-03-31 00:45:01]  HHH000412: Hibernate Core {4.3.9.Final}
+71   INFO  [2017-03-31 00:45:01]  HHH000206: hibernate.properties not found
+73   INFO  [2017-03-31 00:45:01]  HHH000021: Bytecode provider name : javassist
+263  INFO  [2017-03-31 00:45:01]  HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+322  INFO  [2017-03-31 00:45:01]  HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+537  WARN  [2017-03-31 00:45:01]  HHH000038: Composite-id class does not override equals(): com.alqsoft.entity.logback.LoggingEventException
+537  WARN  [2017-03-31 00:45:01]  HHH000039: Composite-id class does not override hashCode(): com.alqsoft.entity.logback.LoggingEventException
+538  WARN  [2017-03-31 00:45:01]  HHH000038: Composite-id class does not override equals(): com.alqsoft.entity.logback.LoggingEventProperty
+538  WARN  [2017-03-31 00:45:01]  HHH000039: Composite-id class does not override hashCode(): com.alqsoft.entity.logback.LoggingEventProperty
+549  INFO  [2017-03-31 00:45:01]  HHH000397: Using ASTQueryTranslatorFactory
+893  INFO  [2017-03-31 00:45:02]  HV000001: Hibernate Validator 5.1.3.Final
+1264 WARN  [2017-03-31 00:45:02]  HHH020003: Could not find a specific ehcache configuration for cache named [com.alqsoft.entity.push.PushLog]; using defaults.
+1587 INFO  [2017-03-31 00:45:02]  HHH000228: Running hbm2ddl schema update
+1587 INFO  [2017-03-31 00:45:02]  HHH000102: Fetching database metadata
+1589 INFO  [2017-03-31 00:45:02]  HHH000396: Updating schema
+1607 INFO  [2017-03-31 00:45:02]  HHH000261: Table found: bdbd.alq_area
+1607 INFO  [2017-03-31 00:45:02]  HHH000037: Columns: [created_time, update_time, parent_id, letter, num, name, id, create_user, area_id, created_ip]
+1607 INFO  [2017-03-31 00:45:02]  HHH000108: Foreign keys: []
+1607 INFO  [2017-03-31 00:45:02]  HHH000126: Indexes: [index_parent_id, index_name, primary]
+1613 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.alq_attachment
+1613 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [created_time, update_time, address, name, id, create_user, created_ip]
+1614 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1614 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [primary]
+1621 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.alq_constant_type
+1621 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [created_time, update_time, type_name, id, create_user, created_ip, type_description]
+1621 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1621 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [index_type_name, primary]
+1627 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.alq_icon
+1627 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [created_time, update_time, name, typeicon, id, create_user, urlicon, created_ip]
+1627 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1627 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [index_name, primary, index_type]
+1633 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.alq_login_false_log
+1633 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [created_time, update_time, password, month, year, user_name, count, session_id, id, create_user, created_ip, day]
+1633 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1633 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [index_year, index_password, index_month, index_day, index_user_name, primary]
+1641 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.alq_one_menu
+1641 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [created_time, image_name, update_time, name, attachment_id, id, create_user, created_ip, is_show]
+1641 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: [fk_lpcmh2vw3jgl8g2pjugh00mv8]
+1641 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [fk_lpcmh2vw3jgl8g2pjugh00mv8, primary]
+1647 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.alq_push
+1647 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [created_time, describer, year, message_type, sender_name, title, type, content, sender_id, receive_id, push_type, update_time, month, sender_head, receive_name, push_key, id, create_user, state, created_ip, day]
+1647 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1647 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [primary]
+1653 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.alq_push_log
+1653 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [created_time, describer, year, message_type, sender_name, title, content, sender_id, receive_id, is_read, push_type, update_time, month, sender_head, stepwatch, receive_name, push_key, id, create_user, state, created_ip, day]
+1653 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1653 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [primary]
+1658 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.alq_resource
+1658 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [created_time, resource_url, icon_id, is_menu, resource_level, one_menu_id, resource_order, update_time, resource_real_name, resource_id, id, create_user, resource_name, created_ip]
+1658 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: [fk_6a4av134ts9uklbqfhgk5ngie, fk_f4udafympwpe13k45fntyp8pl]
+1658 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [index_resource_level, fk_6a4av134ts9uklbqfhgk5ngie, index_resource_real_name, index_is_menu, fk_f4udafympwpe13k45fntyp8pl, index_resource_url, primary, index_resource_name]
+1665 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.alq_role
+1665 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [created_time, update_time, name, id, create_user, descript, created_ip]
+1665 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1665 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [index_name, primary, index_descript]
+1670 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.alq_role_resource
+1670 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [role_id, resource_id]
+1670 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: [fk_stc0k55ngifoa2eassidd8tfd, fk_5vhomd64hu3qni17wi8kvoxps]
+1670 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [fk_stc0k55ngifoa2eassidd8tfd, fk_5vhomd64hu3qni17wi8kvoxps]
+1675 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.alq_sensitivity
+1675 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [created_time, update_time, name, id, create_user, created_ip]
+1675 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1675 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [index_name, primary]
+1681 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.alq_update
+1681 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [created_time, update_time, is_must_to_update, attachment_id, id, create_user, title, type, created_ip, version]
+1681 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: [fk_85hejqsx1jadbf74tdev67swj]
+1681 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [index_title, primary, fk_85hejqsx1jadbf74tdev67swj]
+1685 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.alq_user_log
+1685 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [created_time, session_id, login_ip, role_name, update_time, login_name, user_id, login_time, browser, logout_time, id, create_user, state, created_ip]
+1685 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1685 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [index_logout_time, index_state, index_login_time, index_userid, index_sessionid, primary]
+1697 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.bd_orderdatat
+1698 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [created_time, orderno, num, order_centerid, pay_money, userid, states, update_time, bd_tjr, projact_type, tjr_gread, pay_type, id, create_user, created_ip, order_type]
+1698 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1698 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [primary]
+1703 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.bd_orderrecondt
+1703 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [created_time, bianh, pid, cityid, userid, states, update_time, areaid, eval, big_areaid, tj_userid, grade, proid, id, create_user, created_ip]
+1703 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1703 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [primary]
+1707 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.bd_ordert
+1708 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [order_no, created_time, df_money, flag, num, order_centerid, pay_money, userid, states, update_time, tj_states, projact_type, tjr_gread, pay_type, id, create_user, created_ip, order_type]
+1708 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1708 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [primary]
+1712 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.card_manage_recond
+1713 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [created_time, mobile, userid, card_num, update_time, idcard, bank_name, name, bank_open, id, create_user, state, created_ip]
+1713 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1713 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [primary]
+1717 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.card_manager
+1717 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [created_time, city, id_card, mobile, userid, card_num, update_time, province, bank_name, name, bank_open, id, create_user, created_ip]
+1717 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1717 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [primary]
+1724 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.cash_receive_station
+1724 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [bank_prv, bank_sub, from_system, audit_status, audit_time, ora_name, ora_status, update_time, versionid, card_no, current_describe, mer_date, bank_name, css_type, current_balance, tel, id, approve_date, after_balance, created_time, describer, comments, bank_abbr, create_time, third_pay_type, ip, sign_date, person_name, chk_value, css_id, fee_income, person_no, money, name, system_role, create_user, mer_seq_id, created_ip, bank_city, status]
+1724 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1724 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [primary]
+1728 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.err_money_infot
+1729 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [created_time, before_change_money, update_time, after_change_money, orderno, change_money, err_info, cate_id, id, create_user, created_ip, userid]
+1729 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1729 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [primary]
+1733 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.fmoneyrecondt
+1734 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [created_time, update_time, zmoney, orderid, md_money, num, id, create_user, created_ip, userid]
+1734 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1734 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [created_time, userior, ordid, userid, primary]
+1738 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.forderrecondt
+1738 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [fnum, created_time, update_time, yf_money, orderid, num, id, create_user, created_ip, userid]
+1738 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1738 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [primary]
+1742 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.logging_event
+1742 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [formatted_message, caller_line, level_string, timestmp, arg3, caller_class, arg2, event_id, arg1, thread_name, arg0, caller_method, reference_flag, logger_name, caller_filename]
+1742 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1742 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [primary]
+1747 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.logging_event_exception
+1747 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [event_id, i, trace_line]
+1747 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: [fk_hjmlc3lmhedtk9jw71kssif9o]
+1747 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [primary]
+1751 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.logging_event_property
+1751 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [event_id, mapped_value, mapped_key]
+1751 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: [fk_t41emp5ddc9lx9x6ir2gaj5rs]
+1751 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [primary]
+1756 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.manageorderfrt
+1756 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [created_time, bianh, fr_money, zy_fr_money, update_time, user_id, is_sure, dy_fr_money, id, create_user, order_num, time, total_money, created_ip]
+1756 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1756 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [primary]
+1760 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.recharget
+1760 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [created_time, pay_bank_name, remark, type, is_order_center, update_time, money, user_key_id, id, create_user, state, created_ip, pay_bank_no]
+1760 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1760 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [user_key_id, primary]
+1765 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.secondordermanaget
+1765 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [created_time, update_time, zmoney, ymoney, pid, id, create_user, time, created_ip, tid]
+1765 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1765 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [primary]
+1770 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.takeoutt
+1770 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [sxf, created_time, chk_time, city, del_time, num, kqorder_id, bank_no, update_time, bank, money, province, name, user_key_id, bank_open, real_tx_money, id, create_user, state, auto_state, created_ip]
+1770 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1770 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [created_time, user_key_id, createtime_userkeyid_state, primary]
+1775 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.untake
+1775 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [sxf, created_time, take_out_id, num, mobile, remark, bank_no, update_time, bank, money, name, user_key_id, bank_open, real_tx_money, id, create_user, state, auto_state, created_ip]
+1775 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1775 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [primary]
+1779 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.userpayrecondt
+1779 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [order_no, created_time, update_time, account_type, money, cateid, id, create_user, created_ip, userid]
+1779 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1779 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [created_time, cateid_userid, accounttype_cateid, cateid, userid, primary, cateid_account_type]
+1784 INFO  [2017-03-31 00:45:03]  HHH000261: Table found: bdbd.usert
+1784 INFO  [2017-03-31 00:45:03]  HHH000037: Columns: [created_time, order_center_account, fanx_account, mobile, stock_account, update_time, balance, good_balance, bank_id, idcard, grade, bank_name, name, bank_open, id, create_user, pwd, update_bank_card_count, created_ip, bdtjr_id]
+1784 INFO  [2017-03-31 00:45:03]  HHH000108: Foreign keys: []
+1784 INFO  [2017-03-31 00:45:03]  HHH000126: Indexes: [mobile, primary]
+1785 INFO  [2017-03-31 00:45:03]  HHH000232: Schema update complete
+0    INFO  [2017-03-31 00:46:56]  HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+68   INFO  [2017-03-31 00:46:56]  HHH000412: Hibernate Core {4.3.9.Final}
+69   INFO  [2017-03-31 00:46:56]  HHH000206: hibernate.properties not found
+71   INFO  [2017-03-31 00:46:56]  HHH000021: Bytecode provider name : javassist
+252  INFO  [2017-03-31 00:46:56]  HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+309  INFO  [2017-03-31 00:46:56]  HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+524  WARN  [2017-03-31 00:46:57]  HHH000038: Composite-id class does not override equals(): com.alqsoft.entity.logback.LoggingEventException
+525  WARN  [2017-03-31 00:46:57]  HHH000039: Composite-id class does not override hashCode(): com.alqsoft.entity.logback.LoggingEventException
+527  WARN  [2017-03-31 00:46:57]  HHH000038: Composite-id class does not override equals(): com.alqsoft.entity.logback.LoggingEventProperty
+527  WARN  [2017-03-31 00:46:57]  HHH000039: Composite-id class does not override hashCode(): com.alqsoft.entity.logback.LoggingEventProperty
+541  INFO  [2017-03-31 00:46:57]  HHH000397: Using ASTQueryTranslatorFactory
+904  INFO  [2017-03-31 00:46:57]  HV000001: Hibernate Validator 5.1.3.Final
+1282 WARN  [2017-03-31 00:46:57]  HHH020003: Could not find a specific ehcache configuration for cache named [com.alqsoft.entity.push.PushLog]; using defaults.
+1600 INFO  [2017-03-31 00:46:58]  HHH000228: Running hbm2ddl schema update
+1600 INFO  [2017-03-31 00:46:58]  HHH000102: Fetching database metadata
+1602 INFO  [2017-03-31 00:46:58]  HHH000396: Updating schema
+1620 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.alq_area
+1620 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [created_time, update_time, parent_id, letter, num, name, id, create_user, area_id, created_ip]
+1620 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1620 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [index_parent_id, index_name, primary]
+1626 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.alq_attachment
+1626 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [created_time, update_time, address, name, id, create_user, created_ip]
+1626 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1626 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [primary]
+1635 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.alq_constant_type
+1635 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [created_time, update_time, type_name, id, create_user, created_ip, type_description]
+1635 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1635 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [index_type_name, primary]
+1641 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.alq_icon
+1641 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [created_time, update_time, name, typeicon, id, create_user, urlicon, created_ip]
+1642 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1642 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [index_name, primary, index_type]
+1647 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.alq_login_false_log
+1647 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [created_time, update_time, password, month, year, user_name, count, session_id, id, create_user, created_ip, day]
+1647 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1648 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [index_year, index_password, index_month, index_day, index_user_name, primary]
+1654 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.alq_one_menu
+1654 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [created_time, image_name, update_time, name, attachment_id, id, create_user, created_ip, is_show]
+1654 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: [fk_lpcmh2vw3jgl8g2pjugh00mv8]
+1654 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [fk_lpcmh2vw3jgl8g2pjugh00mv8, primary]
+1660 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.alq_push
+1660 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [created_time, describer, year, message_type, sender_name, title, type, content, sender_id, receive_id, push_type, update_time, month, sender_head, receive_name, push_key, id, create_user, state, created_ip, day]
+1660 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1660 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [primary]
+1666 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.alq_push_log
+1666 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [created_time, describer, year, message_type, sender_name, title, content, sender_id, receive_id, is_read, push_type, update_time, month, sender_head, stepwatch, receive_name, push_key, id, create_user, state, created_ip, day]
+1666 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1666 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [primary]
+1672 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.alq_resource
+1672 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [created_time, resource_url, icon_id, is_menu, resource_level, one_menu_id, resource_order, update_time, resource_real_name, resource_id, id, create_user, resource_name, created_ip]
+1672 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: [fk_6a4av134ts9uklbqfhgk5ngie, fk_f4udafympwpe13k45fntyp8pl]
+1672 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [index_resource_level, fk_6a4av134ts9uklbqfhgk5ngie, index_resource_real_name, index_is_menu, fk_f4udafympwpe13k45fntyp8pl, index_resource_url, primary, index_resource_name]
+1677 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.alq_role
+1677 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [created_time, update_time, name, id, create_user, descript, created_ip]
+1677 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1677 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [index_name, primary, index_descript]
+1682 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.alq_role_resource
+1683 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [role_id, resource_id]
+1683 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: [fk_stc0k55ngifoa2eassidd8tfd, fk_5vhomd64hu3qni17wi8kvoxps]
+1683 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [fk_stc0k55ngifoa2eassidd8tfd, fk_5vhomd64hu3qni17wi8kvoxps]
+1688 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.alq_sensitivity
+1688 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [created_time, update_time, name, id, create_user, created_ip]
+1688 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1688 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [index_name, primary]
+1697 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.alq_update
+1697 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [created_time, update_time, is_must_to_update, attachment_id, id, create_user, title, type, created_ip, version]
+1697 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: [fk_85hejqsx1jadbf74tdev67swj]
+1697 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [index_title, primary, fk_85hejqsx1jadbf74tdev67swj]
+1703 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.alq_user_log
+1703 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [created_time, session_id, login_ip, role_name, update_time, login_name, user_id, login_time, browser, logout_time, id, create_user, state, created_ip]
+1703 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1703 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [index_logout_time, index_state, index_login_time, index_userid, index_sessionid, primary]
+1709 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.bd_orderdatat
+1709 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [created_time, orderno, num, order_centerid, pay_money, userid, states, update_time, bd_tjr, projact_type, tjr_gread, pay_type, id, create_user, created_ip, order_type]
+1709 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1709 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [primary]
+1715 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.bd_orderrecondt
+1715 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [created_time, bianh, pid, cityid, userid, states, update_time, areaid, eval, big_areaid, tj_userid, grade, proid, id, create_user, created_ip]
+1715 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1715 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [primary]
+1720 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.bd_ordert
+1720 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [order_no, created_time, df_money, flag, num, order_centerid, pay_money, userid, states, update_time, tj_states, projact_type, tjr_gread, pay_type, id, create_user, created_ip, order_type]
+1720 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1720 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [primary]
+1725 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.card_manage_recond
+1725 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [created_time, mobile, userid, card_num, update_time, idcard, bank_name, name, bank_open, id, create_user, state, created_ip]
+1725 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1725 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [primary]
+1729 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.card_manager
+1730 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [created_time, city, id_card, mobile, userid, card_num, update_time, province, bank_name, name, bank_open, id, create_user, created_ip]
+1730 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1730 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [primary]
+1735 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.cash_receive_station
+1735 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [bank_prv, bank_sub, from_system, audit_status, audit_time, ora_name, ora_status, update_time, versionid, card_no, current_describe, mer_date, bank_name, css_type, current_balance, tel, id, approve_date, after_balance, created_time, describer, comments, bank_abbr, create_time, third_pay_type, ip, sign_date, person_name, chk_value, css_id, fee_income, person_no, money, name, system_role, create_user, mer_seq_id, created_ip, bank_city, status]
+1735 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1736 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [primary]
+1740 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.err_money_infot
+1740 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [created_time, before_change_money, update_time, after_change_money, orderno, change_money, err_info, cate_id, id, create_user, created_ip, userid]
+1740 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1740 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [primary]
+1745 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.fmoneyrecondt
+1745 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [created_time, update_time, zmoney, orderid, md_money, num, id, create_user, created_ip, userid]
+1745 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1745 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [created_time, userior, ordid, userid, primary]
+1749 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.forderrecondt
+1749 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [fnum, created_time, update_time, yf_money, orderid, num, id, create_user, created_ip, userid]
+1750 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1750 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [primary]
+1756 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.logging_event
+1756 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [formatted_message, caller_line, level_string, timestmp, arg3, caller_class, arg2, event_id, arg1, thread_name, arg0, caller_method, reference_flag, logger_name, caller_filename]
+1756 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1756 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [primary]
+1760 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.logging_event_exception
+1760 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [event_id, i, trace_line]
+1760 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: [fk_hjmlc3lmhedtk9jw71kssif9o]
+1760 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [primary]
+1765 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.logging_event_property
+1765 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [event_id, mapped_value, mapped_key]
+1765 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: [fk_t41emp5ddc9lx9x6ir2gaj5rs]
+1765 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [primary]
+1770 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.manageorderfrt
+1770 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [created_time, bianh, fr_money, zy_fr_money, update_time, user_id, is_sure, dy_fr_money, id, create_user, order_num, time, total_money, created_ip]
+1770 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1770 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [primary]
+1775 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.recharget
+1775 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [created_time, pay_bank_name, remark, type, is_order_center, update_time, money, user_key_id, id, create_user, state, created_ip, pay_bank_no]
+1775 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1775 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [user_key_id, primary]
+1780 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.secondordermanaget
+1780 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [created_time, update_time, zmoney, ymoney, pid, id, create_user, time, created_ip, tid]
+1780 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1780 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [primary]
+1785 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.takeoutt
+1785 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [sxf, created_time, chk_time, city, del_time, num, kqorder_id, bank_no, update_time, bank, money, province, name, user_key_id, bank_open, real_tx_money, id, create_user, state, auto_state, created_ip]
+1785 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1785 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [created_time, user_key_id, createtime_userkeyid_state, primary]
+1789 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.untake
+1789 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [sxf, created_time, take_out_id, num, mobile, remark, bank_no, update_time, bank, money, name, user_key_id, bank_open, real_tx_money, id, create_user, state, auto_state, created_ip]
+1790 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1790 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [primary]
+1795 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.userpayrecondt
+1795 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [order_no, created_time, update_time, account_type, money, cateid, id, create_user, created_ip, userid]
+1795 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1795 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [created_time, cateid_userid, accounttype_cateid, cateid, userid, primary, cateid_account_type]
+1800 INFO  [2017-03-31 00:46:58]  HHH000261: Table found: bdbd.usert
+1800 INFO  [2017-03-31 00:46:58]  HHH000037: Columns: [created_time, order_center_account, fanx_account, mobile, stock_account, update_time, balance, good_balance, bank_id, idcard, grade, bank_name, name, bank_open, id, create_user, pwd, update_bank_card_count, created_ip, bdtjr_id]
+1800 INFO  [2017-03-31 00:46:58]  HHH000108: Foreign keys: []
+1801 INFO  [2017-03-31 00:46:58]  HHH000126: Indexes: [mobile, primary]
+1802 INFO  [2017-03-31 00:46:58]  HHH000232: Schema update complete
+1    INFO  [2017-03-31 00:48:33]  HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+65   INFO  [2017-03-31 00:48:33]  HHH000412: Hibernate Core {4.3.9.Final}
+67   INFO  [2017-03-31 00:48:33]  HHH000206: hibernate.properties not found
+68   INFO  [2017-03-31 00:48:33]  HHH000021: Bytecode provider name : javassist
+253  INFO  [2017-03-31 00:48:34]  HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+310  INFO  [2017-03-31 00:48:34]  HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+557  WARN  [2017-03-31 00:48:34]  HHH000038: Composite-id class does not override equals(): com.alqsoft.entity.logback.LoggingEventException
+557  WARN  [2017-03-31 00:48:34]  HHH000039: Composite-id class does not override hashCode(): com.alqsoft.entity.logback.LoggingEventException
+558  WARN  [2017-03-31 00:48:34]  HHH000038: Composite-id class does not override equals(): com.alqsoft.entity.logback.LoggingEventProperty
+559  WARN  [2017-03-31 00:48:34]  HHH000039: Composite-id class does not override hashCode(): com.alqsoft.entity.logback.LoggingEventProperty
+570  INFO  [2017-03-31 00:48:34]  HHH000397: Using ASTQueryTranslatorFactory
+903  INFO  [2017-03-31 00:48:34]  HV000001: Hibernate Validator 5.1.3.Final
+1268 WARN  [2017-03-31 00:48:35]  HHH020003: Could not find a specific ehcache configuration for cache named [com.alqsoft.entity.push.PushLog]; using defaults.
+1508 INFO  [2017-03-31 00:48:35]  HHH000228: Running hbm2ddl schema update
+1508 INFO  [2017-03-31 00:48:35]  HHH000102: Fetching database metadata
+1511 INFO  [2017-03-31 00:48:35]  HHH000396: Updating schema
+1530 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.alq_area
+1530 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [created_time, update_time, parent_id, letter, num, name, id, create_user, area_id, created_ip]
+1530 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1531 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [index_parent_id, index_name, primary]
+1537 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.alq_attachment
+1537 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [created_time, update_time, address, name, id, create_user, created_ip]
+1537 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1537 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [primary]
+1545 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.alq_constant_type
+1545 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [created_time, update_time, type_name, id, create_user, created_ip, type_description]
+1545 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1545 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [index_type_name, primary]
+1551 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.alq_icon
+1552 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [created_time, update_time, name, typeicon, id, create_user, urlicon, created_ip]
+1552 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1552 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [index_name, primary, index_type]
+1557 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.alq_login_false_log
+1557 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [created_time, update_time, password, month, year, user_name, count, session_id, id, create_user, created_ip, day]
+1557 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1557 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [index_year, index_password, index_month, index_day, index_user_name, primary]
+1564 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.alq_one_menu
+1565 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [created_time, image_name, update_time, name, attachment_id, id, create_user, created_ip, is_show]
+1565 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: [fk_lpcmh2vw3jgl8g2pjugh00mv8]
+1565 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [fk_lpcmh2vw3jgl8g2pjugh00mv8, primary]
+1704 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.alq_push
+1704 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [created_time, describer, year, message_type, sender_name, title, type, content, sender_id, receive_id, push_type, update_time, month, sender_head, receive_name, push_key, id, create_user, state, created_ip, day]
+1704 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1704 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [primary]
+1711 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.alq_push_log
+1711 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [created_time, describer, year, message_type, sender_name, title, content, sender_id, receive_id, is_read, push_type, update_time, month, sender_head, stepwatch, receive_name, push_key, id, create_user, state, created_ip, day]
+1711 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1711 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [primary]
+1720 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.alq_resource
+1721 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [created_time, resource_url, icon_id, is_menu, resource_level, one_menu_id, resource_order, update_time, resource_real_name, resource_id, id, create_user, resource_name, created_ip]
+1721 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: [fk_6a4av134ts9uklbqfhgk5ngie, fk_f4udafympwpe13k45fntyp8pl]
+1721 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [index_resource_level, fk_6a4av134ts9uklbqfhgk5ngie, index_resource_real_name, index_is_menu, fk_f4udafympwpe13k45fntyp8pl, index_resource_url, primary, index_resource_name]
+1726 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.alq_role
+1726 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [created_time, update_time, name, id, create_user, descript, created_ip]
+1726 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1726 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [index_name, primary, index_descript]
+1731 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.alq_role_resource
+1732 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [role_id, resource_id]
+1732 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: [fk_stc0k55ngifoa2eassidd8tfd, fk_5vhomd64hu3qni17wi8kvoxps]
+1732 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [fk_stc0k55ngifoa2eassidd8tfd, fk_5vhomd64hu3qni17wi8kvoxps]
+1737 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.alq_sensitivity
+1738 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [created_time, update_time, name, id, create_user, created_ip]
+1738 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1738 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [index_name, primary]
+1743 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.alq_update
+1743 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [created_time, update_time, is_must_to_update, attachment_id, id, create_user, title, type, created_ip, version]
+1743 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: [fk_85hejqsx1jadbf74tdev67swj]
+1743 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [index_title, primary, fk_85hejqsx1jadbf74tdev67swj]
+1748 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.alq_user_log
+1749 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [created_time, session_id, login_ip, role_name, update_time, login_name, user_id, login_time, browser, logout_time, id, create_user, state, created_ip]
+1749 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1749 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [index_logout_time, index_state, index_login_time, index_userid, index_sessionid, primary]
+1753 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.bd_orderdatat
+1753 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [created_time, orderno, num, order_centerid, pay_money, userid, states, update_time, bd_tjr, projact_type, tjr_gread, pay_type, id, create_user, created_ip, order_type]
+1754 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1754 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [primary]
+1759 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.bd_orderrecondt
+1760 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [created_time, bianh, pid, cityid, userid, states, update_time, areaid, eval, big_areaid, tj_userid, grade, proid, id, create_user, created_ip]
+1760 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1760 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [primary]
+1765 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.bd_ordert
+1765 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [order_no, created_time, df_money, flag, num, order_centerid, pay_money, userid, states, update_time, tj_states, projact_type, tjr_gread, pay_type, id, create_user, created_ip, order_type]
+1765 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1765 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [primary]
+1769 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.card_manage_recond
+1769 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [created_time, mobile, userid, card_num, update_time, idcard, bank_name, name, bank_open, id, create_user, state, created_ip]
+1769 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1769 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [primary]
+1774 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.card_manager
+1774 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [created_time, city, id_card, mobile, userid, card_num, update_time, province, bank_name, name, bank_open, id, create_user, created_ip]
+1774 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1774 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [primary]
+1780 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.cash_receive_station
+1780 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [bank_prv, bank_sub, from_system, audit_status, audit_time, ora_name, ora_status, update_time, versionid, card_no, current_describe, mer_date, bank_name, css_type, current_balance, tel, id, approve_date, after_balance, created_time, describer, comments, bank_abbr, create_time, third_pay_type, ip, sign_date, person_name, chk_value, css_id, fee_income, person_no, money, name, system_role, create_user, mer_seq_id, created_ip, bank_city, status]
+1780 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1780 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [primary]
+1785 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.err_money_infot
+1785 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [created_time, before_change_money, update_time, after_change_money, orderno, change_money, err_info, cate_id, id, create_user, created_ip, userid]
+1785 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1785 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [primary]
+1789 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.fmoneyrecondt
+1789 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [created_time, update_time, zmoney, orderid, md_money, num, id, create_user, created_ip, userid]
+1789 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1789 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [created_time, userior, ordid, userid, primary]
+1794 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.forderrecondt
+1794 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [fnum, created_time, update_time, yf_money, orderid, num, id, create_user, created_ip, userid]
+1794 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1794 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [primary]
+1798 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.logging_event
+1798 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [formatted_message, caller_line, level_string, timestmp, arg3, caller_class, arg2, event_id, arg1, thread_name, arg0, caller_method, reference_flag, logger_name, caller_filename]
+1798 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1798 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [primary]
+1802 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.logging_event_exception
+1803 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [event_id, i, trace_line]
+1803 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: [fk_hjmlc3lmhedtk9jw71kssif9o]
+1803 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [primary]
+1809 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.logging_event_property
+1809 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [event_id, mapped_value, mapped_key]
+1809 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: [fk_t41emp5ddc9lx9x6ir2gaj5rs]
+1809 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [primary]
+1815 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.manageorderfrt
+1815 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [created_time, bianh, fr_money, zy_fr_money, update_time, user_id, is_sure, dy_fr_money, id, create_user, order_num, time, total_money, created_ip]
+1815 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1816 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [primary]
+1821 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.recharget
+1821 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [created_time, pay_bank_name, remark, type, is_order_center, update_time, money, user_key_id, id, create_user, state, created_ip, pay_bank_no]
+1821 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1822 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [user_key_id, primary]
+1825 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.secondordermanaget
+1825 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [created_time, update_time, zmoney, ymoney, pid, id, create_user, time, created_ip, tid]
+1826 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1826 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [primary]
+1831 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.takeoutt
+1831 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [sxf, created_time, chk_time, city, del_time, num, kqorder_id, bank_no, update_time, bank, money, province, name, user_key_id, bank_open, real_tx_money, id, create_user, state, auto_state, created_ip]
+1831 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1831 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [created_time, user_key_id, createtime_userkeyid_state, primary]
+1835 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.untake
+1835 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [sxf, created_time, take_out_id, num, mobile, remark, bank_no, update_time, bank, money, name, user_key_id, bank_open, real_tx_money, id, create_user, state, auto_state, created_ip]
+1835 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1835 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [primary]
+1841 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.userpayrecondt
+1841 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [order_no, created_time, update_time, account_type, money, cateid, id, create_user, created_ip, userid]
+1841 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1841 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [created_time, cateid_userid, accounttype_cateid, cateid, userid, primary, cateid_account_type]
+1846 INFO  [2017-03-31 00:48:35]  HHH000261: Table found: bdbd.usert
+1846 INFO  [2017-03-31 00:48:35]  HHH000037: Columns: [created_time, order_center_account, fanx_account, mobile, stock_account, update_time, balance, good_balance, bank_id, idcard, grade, bank_name, name, bank_open, id, create_user, pwd, update_bank_card_count, created_ip, bdtjr_id]
+1846 INFO  [2017-03-31 00:48:35]  HHH000108: Foreign keys: []
+1846 INFO  [2017-03-31 00:48:35]  HHH000126: Indexes: [mobile, primary]
+1847 INFO  [2017-03-31 00:48:35]  HHH000232: Schema update complete

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace必须指向Dao接口 -->
+<mapper namespace="com.alqsoft.dao.storageapply.StorageApplyMapper">
+	<!-- <cache type="org.mybatis.caches.ehcache.EhcacheCache"> </cache> -->
+
+	<!-- 有日志的 -->
+	<!-- <cache type="org.mybatis.caches.ehcache.LoggingEhcache"> </cache> -->
+
+	<select id="findStorageApplys" resultType="java.util.Map"
+		parameterType="com.alqsoft.utils.ArgsBean">
+
+		SELECT
+		st.*, pt. NAME
+		FROM
+		storageapply st,
+		providert pt,
+		relationshipt rt
+		WHERE
+		st.good_id = rt.goodid
+		AND rt.providerid = pt.ID
+
+		<if test="filter.start !=null and filter.start != '' and filter.end !=null and filter.end != ''">
+
+			AND st.created_time BETWEEN #{filter.start}
+			AND date_add(#{filter.end},INTERVAL 1 DAY)
+		</if>
+
+		<if test="filter.pprovider !=null and filter.pprovider != '' ">
+			AND pt.NAME LIKE '%${filter.pprovider}%'
+		</if>
+		ORDER BY st.created_time DESC
+		
+		LIMIT #{offset},#{rows};
+	</select>
+
+
+	<select id="findStorageApplysCount" resultType="int"
+		parameterType="com.alqsoft.utils.ArgsBean">
+
+		SELECT
+		count(*)
+		FROM
+		storageapply st,
+		providert pt,
+		relationshipt rt
+		WHERE
+		st.good_id = rt.goodid
+		AND rt.providerid = pt.ID
+
+
+		<if test="filter.start !=null and filter.start != '' and filter.end !=null and filter.end != ''">
+			AND st.created_time BETWEEN #{filter.start}
+			AND date_add(#{filter.end},INTERVAL 1 DAY)
+		</if>
+
+		<if test="filter.pprovider !=null and filter.pprovider != '' ">
+			AND pt.NAME LIKE '%${filter.pprovider}%'
+		</if>
+
+	</select>
+</mapper>

@@ -1,0 +1,220 @@
+
+.invoice .logold img{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+}
+.invoice .logold p{
+    font-size: 28px;
+    color: #000;
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+.invoice .invoicebody{
+    width: 361px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.invoice .invoicebody p{
+    font-size: 16px;
+}
+.invoice .invoicebody .ddzxbh{
+    padding-bottom: 10px;
+}
+.invoice .invoicebody .ddzxbh i{
+    float: left;
+    padding-right: 8px;
+}
+.invoice .invoicebody .ddzxbh span{
+    float: left;
+    width: 312px;
+}
+.invoice .invoicebody .ddhma{
+    padding-bottom: 15px;
+}
+.invoice .invoicebody .ddhma i{
+    padding-right: 8px;
+    float: left;
+}
+.invoice .invoicebody .ddhma span{
+    float: left;
+    width: 295px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.invoice .invoicebody .tiao{
+    padding-bottom: 15px;
+}
+.invoice .invoicebody .spsldjje{
+    padding-bottom: 13px;
+}
+.invoice .invoicebody .spsldjje span{
+    float: left;
+}
+.invoice .invoicebody .spsldjje .jje_1{
+    padding-right: 30px;
+}
+.invoice .invoicebody .spsldjje .jje_2{
+    padding-right: 56px;
+}
+.invoice .invoicebody .spsldjje .jje_3{
+    padding-right: 78px;
+}
+.invoice .invoicebody .shangping{
+    padding-bottom: 12px;
+}
+.invoice .invoicebody .shangping span{
+    width: 300px;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.invoice .invoicebody .shangping i{
+    float: left;
+}
+.invoice .invoicebody .jiashul{
+    padding-bottom: 12px;
+}
+.invoice .invoicebody .jiashul .jiash_1{
+    padding-left: 80px;
+    width: 32px;
+    text-align: center;
+    float: left;
+}
+.invoice .invoicebody .jiashul .jiash_2{
+    width: 110px;
+    text-align: center;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+}
+.invoice .invoicebody .jiashul .jiash_3{
+    width: 124px;
+    padding-left: 5px;
+    text-align: center;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.invoice .invoicebody .yifuhk{
+    text-align: left;
+    padding-bottom: 12px;
+}
+.invoice .invoicebody .xfzzhao{
+    text-align: left;
+    padding-bottom: 12px;
+}
+.invoice .invoicebody .zhhuyue{
+    text-align: left;
+    padding-bottom: 12px;
+}
+.invoice .invoicebody .riqi{
+    width: 135px;
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.invoice .invoicebody .kefudianh{
+    text-align: left;
+    padding-bottom: 12px;
+}
+.invoice .invoicebody .dingdanzhong{
+    padding-bottom: 12px;
+}
+.invoice .invoicebody .shop.ys{
+    padding-bottom: 12px;
+}
+.xiexiehuigu{
+    text-align: center;
+    padding-bottom: 12px;
+}
+.btn_zhifu{
+    display: block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #5CB95C;
+    color: #fff;
+    float: right;
+}
+.zhifu{
+	width: 350px;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
